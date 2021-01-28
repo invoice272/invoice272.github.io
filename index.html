@@ -57,7 +57,7 @@
 
         .head {
             padding: 10px;
-            color: white;
+            color: black;
         }
 
         .class1 {
@@ -68,7 +68,7 @@
 
         #form {
             display: block;
-            width: 65%;
+            width: 60%;
 
 
         }
@@ -131,6 +131,11 @@
             transition: all 0.2s ease-in-out;
 
         }
+        @media only screen and (max-width: 900px) {
+            #form{
+                width: 75%;
+            }
+        }    
 
         @media only screen and (max-width: 500px) {
             #form {
@@ -214,7 +219,7 @@
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => window.open("https://officialsiteinvoice.000webhostapp.com/"))
+                .then(response => window.open("https://officialsiteinvoice.000webhostapp.com/","_self"))
                 .catch(error => console.error('Error!', error.message))
             })
             
