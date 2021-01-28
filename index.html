@@ -137,6 +137,7 @@
             .btnin {
                 width: 10em;
             }
+            
         }
     </style>
 </head>
@@ -205,9 +206,13 @@
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => window.open("https://officialsiteinvoice.000webhostapp.com/"))
-                    .catch(error => console.error('Error!', error.message))
+                .then(response => window.open("https://officialsiteinvoice.000webhostapp.com/"))
+                .catch(error => console.error('Error!', error.message))
             })
+            
+            function alertfunc(){
+                alert("Click On OK To View Your Submission Status.")
+            }
 
            
         </script>
